@@ -1,6 +1,14 @@
 # AirMorph-JinanLi
 Branch-Instance Analysis and Topology Reconstruction of CT-Derived Airway Trees
+**Upstream dependency: AirMorph**
 
+This repository is a downstream extension of the original AirMorph project.  
+The complete AirMorph repository is required:
+
+**Repository:** https://github.com/EndoluminalSurgicalVision-IMR/AirMorph.git  
+**Paper:** M. Zhang *et al*., “AirMorph: Topology-Preserving Deep Learning for Pulmonary Airway Analysis,” *arXiv preprint arXiv:2412.11039*, 2025, doi: 10.48550/arXiv.2412.11039.
+
+AirMorph provides the upstream airway segmentation, skeleton generation, anatomical labelling and branch-analysis outputs used by this project. This repository only contains the downstream branch-instance analysis, topology reconstruction and beyond-subsegment extension.
 Overview
 
 This repository contains the implementation developed for the MSc Final Year Project:
@@ -386,4 +394,14 @@ MSc dissertation, University College London, 2026.
 
 Licence
 
-Add the appropriate licence before public release. The repository may depend on external data, code or model licences associated with AirMorph and the source datasets.
+The original code developed specifically for this MSc project is released under the MIT License. See the `LICENSE` file for details.
+
+This licence applies only to the original source code contained in this repository. It does not apply to AirMorph, its source code, pretrained models, configuration files, sample data, or other external resources.
+
+AirMorph is an external upstream dependency and remains subject to the terms specified by its original authors and repository:
+
+https://github.com/EndoluminalSurgicalVision-IMR/AirMorph
+
+Users are responsible for obtaining and using AirMorph, medical imaging data, pretrained models and third-party dependencies in accordance with their respective licences, access conditions and data-use agreements.
+
+No patient CT data or AirMorph-derived case outputs are distributed with this repository.

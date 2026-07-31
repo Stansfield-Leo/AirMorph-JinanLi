@@ -47,36 +47,28 @@ In this project, beyond-subsegment labels are computational branch-specific iden
 
 Processing Workflow
 
-## Repository Structure
+```mermaid
+flowchart LR
+    A[AirMorph Outputs] --> B[Structure-Oriented Evaluation]
+    B --> C[Branch-Instance Audit]
+    C --> D[Junction Recovery]
+    D --> E[Branch-Junction Graph Reconstruction]
+    E --> F[Root Selection and Hierarchy Assignment]
+    F --> G[Beyond-Subsegment Label Generation]
+    G --> H[CSV Reports and 3D NIfTI Outputs]
 
-```text
-AirMorph/
-├── sample_data/
-│   └── ATM22/
-│       └── 001/
-│           ├── binary_only/
-│           │   ├── airway_bin.nii.gz
-│           │   └── airway_skeleton.nii.gz
-│           │
-│           ├── anatomy_only/
-│           │   ├── 001_skel_parsing.nii.gz
-│           │   └── 001_pred_sub.nii.gz
-│           │
-│           └── airway_sign_analysis/
-│               ├── original_analysis/
-│               │   └── branch_analysis.csv
-│               │
-│               └── generation_repair/
-│                   ├── generation_repair.csv
-│                   ├── beyond_subsegment_mapping.csv
-│                   └── beyond_subsegment_labels.nii.gz
-│
-├── airway_analysis_system.py
-├── airmorph_beyond_subsegment_pipeline.py
-├── requirements.txt
-└── README.md
+    A1[Binary Airway Mask] --> A
+    A2[Airway Skeleton] --> A
+    A3[Branch-Instance Labels] --> A
+    A4[Propagated Anatomical Labels] --> A
+
+    B --> B1[Connected Components]
+    B --> B2[Terminal Branches]
+    B --> B3[Skeleton Length]
+    B --> B4[Maximum Branch Depth]
+    B --> B5[Peripheral Reach]
+    B --> B6[Local Fragmentation]
 ```
-
 Input description
 
 File
@@ -340,23 +332,33 @@ Repository Structure
 
 A recommended repository layout is:
 
-.
+```text
+AirMorph/
+├── sample_data/
+│   └── ATM22/
+│       └── 001/
+│           ├── binary_only/
+│           │   ├── airway_bin.nii.gz
+│           │   └── airway_skeleton.nii.gz
+│           │
+│           ├── anatomy_only/
+│           │   ├── 001_skel_parsing.nii.gz
+│           │   └── 001_pred_sub.nii.gz
+│           │
+│           └── airway_sign_analysis/
+│               ├── original_analysis/
+│               │   └── branch_analysis.csv
+│               │
+│               └── generation_repair/
+│                   ├── generation_repair.csv
+│                   ├── beyond_subsegment_mapping.csv
+│                   └── beyond_subsegment_labels.nii.gz
+│
 ├── airway_analysis_system.py
 ├── airmorph_beyond_subsegment_pipeline.py
-├── src/
-│   ├── io_utils.py
-│   ├── skeleton_analysis.py
-│   ├── branch_analysis.py
-│   ├── junction_recovery.py
-│   ├── graph_reconstruction.py
-│   ├── hierarchy_assignment.py
-│   └── label_propagation.py
-├── data/
-│   └── Case_001/
-├── outputs/
-├── figures/
 ├── requirements.txt
 └── README.md
+```
 
 Adjust the structure to match the actual repository.
 

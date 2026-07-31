@@ -1,4 +1,4 @@
-<img width="440" height="751" alt="image" src="https://github.com/user-attachments/assets/7d47d903-b111-4df2-a2aa-5d598d551107" /># AirMorph-JinanLi
+# AirMorph-JinanLi
 Branch-Instance Analysis and Topology Reconstruction of CT-Derived Airway Trees
 **Upstream dependency: AirMorph**
 

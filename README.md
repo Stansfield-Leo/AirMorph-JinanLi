@@ -47,28 +47,27 @@ In this project, beyond-subsegment labels are computational branch-specific iden
 
 Processing Workflow
 
-```mermaid
-flowchart LR
-    A[AirMorph Outputs] --> B[Structure-Oriented Evaluation]
-    B --> C[Branch-Instance Audit]
-    C --> D[Junction Recovery]
-    D --> E[Branch-Junction Graph Reconstruction]
-    E --> F[Root Selection and Hierarchy Assignment]
-    F --> G[Beyond-Subsegment Label Generation]
-    G --> H[CSV Reports and 3D NIfTI Outputs]
+AirMorph Outputs
+(Binary Airway Mask, Airway Skeleton,
+Branch-Instance Labels and Propagated Anatomical Labels)
+        ↓
+Structure-Oriented Evaluation
+(Connected Components, Terminal Branches,
+Skeleton Length, Maximum Branch Depth,
+Peripheral Reach and Local Fragmentation)
+        ↓
+Branch-Instance Audit
+        ↓
+Junction Recovery
+        ↓
+Branch–Junction Graph Reconstruction
+        ↓
+Root Selection and Hierarchy Assignment
+        ↓
+Beyond-Subsegment Label Generation
+        ↓
+CSV Reports and Optional 3D NIfTI Outputs
 
-    A1[Binary Airway Mask] --> A
-    A2[Airway Skeleton] --> A
-    A3[Branch-Instance Labels] --> A
-    A4[Propagated Anatomical Labels] --> A
-
-    B --> B1[Connected Components]
-    B --> B2[Terminal Branches]
-    B --> B3[Skeleton Length]
-    B --> B4[Maximum Branch Depth]
-    B --> B5[Peripheral Reach]
-    B --> B6[Local Fragmentation]
-```
 Input description
 
 File

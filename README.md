@@ -54,7 +54,7 @@ AirMorph/
 ├── scripts/
 ├── sample_data/
 │   └── ATM22/
-│       └── 001/
+│       └── Case_001/
 │           ├── binary_only/
 │           │   ├── airway_bin.nii.gz
 │           │   └── airway_skeleton.nii.gz

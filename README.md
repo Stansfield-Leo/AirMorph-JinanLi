@@ -386,15 +386,11 @@ Acknowledgements
 
 This project was completed as part of the MSc programme in Medical Robotics and Artificial Intelligence at University College London.
 
-Author: Jinan LiFirst Supervisor: Dr Tianqi YangSecond Supervisor: Prof Joseph Jacob
-
 Citation
 
 When using this repository, please cite the associated MSc dissertation:
 
-J. Li, “Branch-Instance Analysis, Topology Reconstruction and
-Beyond-Subsegment Labeling of CT-Derived Airway Trees,”
-MSc dissertation, University College London, 2026.
+J. Li, “Branch-Instance Analysis, Topology Reconstruction and Beyond-Subsegment Labeling of CT-Derived Airway Trees,” MSc dissertation, University College London, 2026.
 
 Licence
 

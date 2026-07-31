@@ -1,4 +1,4 @@
-# AirMorph-JinanLi
+<img width="440" height="751" alt="image" src="https://github.com/user-attachments/assets/7d47d903-b111-4df2-a2aa-5d598d551107" /># AirMorph-JinanLi
 Branch-Instance Analysis and Topology Reconstruction of CT-Derived Airway Trees
 **Upstream dependency: AirMorph**
 
@@ -47,49 +47,37 @@ In this project, beyond-subsegment labels are computational branch-specific iden
 
 Processing Workflow
 
-AirMorph outputs
-    │
-    ├── Binary airway mask
-    ├── Airway skeleton
-    ├── Branch-instance labels
-    └── Propagated anatomical labels
-    │
-    ▼
-Structure-oriented evaluation
-    ├── Connected components
-    ├── Terminal branches
-    ├── Skeleton length
-    ├── Maximum branch depth
-    ├── Peripheral reach
-    └── Local fragmentation
-    │
-    ▼
-Branch-instance audit
-    │
-    ▼
-Junction recovery
-    │
-    ▼
-Branch–junction graph reconstruction
-    │
-    ▼
-Root selection and hierarchy assignment
-    │
-    ▼
-Beyond-subsegment label generation
-    │
-    ▼
-CSV reports and optional 3D NIfTI outputs
-
-Input Files
-
-Each case directory should contain the required AirMorph outputs.
-
-Case_001/
-├── airway_bin.nii.gz
-├── airway_skeleton.nii.gz
-├── 001_skel_parsing.nii.gz
-└── 001_pred_sub.nii.gz
+AirMorph/
+├── airmorph/
+├── configs/
+├── models/
+├── scripts/
+├── sample_data/
+│   └── ATM22/
+│       └── 001/
+│           ├── binary_only/
+│           │   ├── airway_bin.nii.gz
+│           │   └── airway_skeleton.nii.gz
+│           │
+│           ├── anatomy_only/
+│           │   ├── 001_skel_parsing.nii.gz
+│           │   └── 001_pred_sub.nii.gz
+│           │
+│           └── airway_sign_analysis/
+│               ├── original_analysis/
+│               │   └── branch_analysis.csv
+│               │
+│               ├── generation_repair/
+│               │   ├── generation_repair.csv
+│               │   ├── beyond_subsegment_mapping.csv
+│               │   └── beyond_subsegment_labels.nii.gz
+│               │
+│               └── figures/
+│
+├── airway_analysis_system.py
+├── airmorph_beyond_subsegment_pipeline.py
+├── requirements.txt
+└── README.md
 
 Input description
 

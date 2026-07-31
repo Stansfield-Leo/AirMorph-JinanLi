@@ -46,28 +46,42 @@ Export of reusable case-level reports and branch-mapping tables.
 In this project, beyond-subsegment labels are computational branch-specific identifiers. They are not proposed as a clinically validated anatomical nomenclature.
 
 Processing Workflow
-
+```text
 AirMorph Outputs
-(Binary Airway Mask, Airway Skeleton,
-Branch-Instance Labels and Propagated Anatomical Labels)
-        ↓
+|
+|-- Binary Airway Mask
+|-- Airway Skeleton
+|-- Branch-Instance Labels
+|-- Propagated Anatomical Labels
+|
+v
 Structure-Oriented Evaluation
-(Connected Components, Terminal Branches,
-Skeleton Length, Maximum Branch Depth,
-Peripheral Reach and Local Fragmentation)
-        ↓
+|
+|-- Connected Components
+|-- Terminal Branches
+|-- Skeleton Length
+|-- Maximum Branch Depth
+|-- Peripheral Reach
+|-- Local Fragmentation
+|
+v
 Branch-Instance Audit
-        ↓
+|
+v
 Junction Recovery
-        ↓
-Branch–Junction Graph Reconstruction
-        ↓
+|
+v
+Branch-Junction Graph Reconstruction
+|
+v
 Root Selection and Hierarchy Assignment
-        ↓
+|
+v
 Beyond-Subsegment Label Generation
-        ↓
+|
+v
 CSV Reports and Optional 3D NIfTI Outputs
-
+```
 Input description
 
 File

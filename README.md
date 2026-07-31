@@ -47,14 +47,13 @@ In this project, beyond-subsegment labels are computational branch-specific iden
 
 Processing Workflow
 
+## Repository Structure
+
+```text
 AirMorph/
-├── airmorph/
-├── configs/
-├── models/
-├── scripts/
 ├── sample_data/
 │   └── ATM22/
-│       └── Case_001/
+│       └── 001/
 │           ├── binary_only/
 │           │   ├── airway_bin.nii.gz
 │           │   └── airway_skeleton.nii.gz
@@ -67,17 +66,16 @@ AirMorph/
 │               ├── original_analysis/
 │               │   └── branch_analysis.csv
 │               │
-│               ├── generation_repair/
-│               │   ├── generation_repair.csv
-│               │   ├── beyond_subsegment_mapping.csv
-│               │   └── beyond_subsegment_labels.nii.gz
-│               │
-│               └── figures/
+│               └── generation_repair/
+│                   ├── generation_repair.csv
+│                   ├── beyond_subsegment_mapping.csv
+│                   └── beyond_subsegment_labels.nii.gz
 │
 ├── airway_analysis_system.py
 ├── airmorph_beyond_subsegment_pipeline.py
 ├── requirements.txt
 └── README.md
+```
 
 Input description
 

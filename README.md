@@ -110,11 +110,14 @@ Output Files
 
 Typical outputs include:
 
-Case_001/
-├── branch_analysis.csv
-├── generation_repair.csv
-├── beyond_subsegment_mapping.csv
-└── beyond_subsegment_labels.nii.gz
+```text
+001/
+|
+|-- branch_analysis.csv
+|-- generation_repair.csv
+|-- beyond_subsegment_mapping.csv
+|-- beyond_subsegment_labels.nii.gz
+```
 
 Main outputs
 
